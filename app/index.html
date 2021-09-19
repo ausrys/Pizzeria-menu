@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- container -->
+    <div class="container">
+        <!-- form class -->
+
+            <form id="add-pizza-form">
+                <label id="pizzaName" >Name</label>
+                <input type="text" maxlength="30" name = "pizzaName" required>
+                <label id="pizzaPrice">Price</label>
+                <input type="number" name="pizzaPrice" min="10" max = "99">
+                <label id="pizzaHeat">Heat</label>
+                <input type="number" name="pizzaHeat" min="1" max="3"><br>
+                
+                <input id="add-pizza-button" type="submit"  value="Add pizza">
+                <!-- Toppings list -->
+                <h3 >Toppings: </h3>
+                <p id="toppings-list"></p>
+            </form>
+            
+            <div class="toppings">
+
+                
+                <label id="pizzaToppings">Toppings</label>
+                <input id="toppings" type="text" maxlength="30" name="pizzaToppings" required>
+                <button onclick="addToppings()" class="topping-btn">Add topping</button><br>
+                
+            </div>
+        <!-- form class end-->
+
+        <!-- sorting -->
+        <div class="sorting" name= "sorting">
+            <button onclick="sortListByName()"> Sort by name</button>
+            <!-- Missing Sorting functions -->
+        </div>
+        <!-- sorting end -->
+
+        
+
+        <!-- pizza-menu -->
+        <div class="pizza-menu">
+            <h1>All the pizzas</h1>
+            <ul id="pizzas">
+            </ul>
+        </div>
+
+        <!-- pizza-menu end -->
+
+    </div>
+    <!-- .container end -->
+
+    <!-- JavaScript file -->
+    <script src="../js/script.js"></script>
+</body>
+</html>
